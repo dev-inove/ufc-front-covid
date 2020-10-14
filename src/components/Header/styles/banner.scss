@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    
+    height: 100vh;
+        background-image: url('../../../assets/img/purple-effect.png'),
+        url('../../../assets/img/banner.jpg');
+
+    &__title {
+        width: 80rem;
+        margin: auto 0;
+        color: white;
+        margin-left: 1.5rem;;
+
+        h1 {
+            font-family: 'Raleway';
+            font-size: 7.2rem;
+            font-weight: bolder;
+            line-height: 7.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
+
+        h2 {
+            font-family: 'Merriweather';
+            font-weight: 400;
+            font-size: 1.8rem;
+
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-self: center;
+        width: 80rem;
+        margin-bottom: 5rem;
+    }
+}

@@ -1,0 +1,65 @@
+.action-button {
+    border: none;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1.6rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #2f80ed;
+    cursor: pointer;
+
+    &.filled {
+        color: #fff;
+        background-color: #2f80ed;
+    }
+}
+.admin-page-title {
+    &__main {
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+        color: rgba(black, 0.87);
+    }
+
+    &__sub {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: rgba(black, 0.45);
+    }
+}
+.dark {
+    background-color: #f7f7f7;
+}
+
+.table {
+    font-size: 1.4rem;
+    width: 100%;
+
+    tr {
+        height: 60px;
+    }
+}
+
+.title-row {
+    text-transform: uppercase;
+
+    th {
+        text-align: start;
+    }
+}
+
+.icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: rgba(black, 0.45);
+    cursor: pointer;
+
+    &:hover.edit {
+        fill: #f6e58d;
+    }
+
+    &:hover.delete {
+        fill: #ff7979;
+    }
+}

@@ -1,0 +1,124 @@
+
+
+
+
+
+/* Elements Styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-grey-1);
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin-top: 15rem;
+
+    &__social {
+        width: 18.2rem;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--social);
+
+        margin: 2rem 0;
+
+       
+
+        hr {
+            background: var(--black-7);
+            margin-top: 0.2rem;
+        }
+
+        &--icon {
+          
+
+            fill: var(--social-icons);
+            margin: 1rem;
+            height: 2.4rem;
+            width: 2.4rem;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__legal {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: var(--black-5);
+
+       
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+
+        width: 39.3rem;
+        height: 35.5rem;
+        position: relative;
+        top: -10rem;
+        background-color: var(--white-1);
+        border-radius: 1.5rem;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+      
+
+        &--title {
+            display: flex;
+            align-items: center;
+            margin-left: 4rem;
+
+            h1 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: var(--black-4);
+                margin: 1rem 2rem;
+            }
+
+            svg {
+                height: 2rem;
+                width: 2rem;
+                fill: var(--black-5);
+                cursor: pointer;
+
+                &.left-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &--campus-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0.5rem 0;
+
+            &--text {
+                font-size: 1.8rem;
+                color: var(--black-5);
+
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    color: var(--black-3);
+                }
+            }
+
+            &--icon-box {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            &--icon {
+                fill: var(-black-5);
+                margin: 3rem;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+}

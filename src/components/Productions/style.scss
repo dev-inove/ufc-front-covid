@@ -1,0 +1,26 @@
+.productions-card{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 2.5rem;
+    height: 41em;
+    width: 44rem;
+    border: 1px solid;
+    border-color: var( --black-8);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card_title{
+    height: 5rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: -2rem;
+
+    text-align: center;
+} 
+.card_img{
+    width: 90%;
+    height: 90;
+    align-self: center;
+    margin: auto;
+}
