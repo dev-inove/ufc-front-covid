@@ -12,11 +12,11 @@ const CallToAction = () => (
             src={Foto1}
             alt="call-to-action-cover"
         />
-        <h2>
+        <h1>
             Precisamos de sua ajuda para combater esse vírus, juntos
             <br />somos mais fortes.
-        </h2>
-        <button>Envie sua ação de combate ao covid-19</button>
+        </h1>
+        {/* <button>Envie sua ação de combate ao covid-19</button> */}
     </div>
 
 </>
