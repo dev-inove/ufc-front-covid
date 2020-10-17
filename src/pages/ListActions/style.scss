@@ -1,3 +1,81 @@
+.page {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // align-items: center;
+  // align-content: center;
+}
+
+.page-title {
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.page-title h1 {
+  font-size: 50px;
+}
+
+.page-form {
+  margin-left: 5%;
+  width: auto;
+}
+
+.page-listActions {
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+// bootstrap custom
+.page-btn {
+  background-color: #66288e;
+  color: white;
+  padding: 0.7rem 5rem;
+  border: none;
+  border-radius: 4rem;
+}
+
+.page-btn:hover {
+  color: white;
+  background-color: purple;
+}
+
+.page-btn2 {
+  margin-top: 2%;
+}
+
+#jumbo-listAction {
+  background-color: #bb8cda;
+  max-height: 250px;
+  color: ghostwhite;
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+}
+
+#jumbo-listAction h1 {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+#jumbo-listAction p {
+  font-size: 10px;
+  max-width: 40%;
+  font-family: "Poppins", sans-serif;
+}
+
+.jumbo-listAction-image {
+  max-width: 30%;
+}
+
+.selector {
+  width: 20%;
+}
+
+// -----------------------------------------------------
+/*
 .Page {
   margin-top: 80px;
   width: 100%;
@@ -45,7 +123,7 @@
 .page-header-img {
   width: 60%;
   height: 20%;
-
+  
   margin-top: 60px;
 }
 
@@ -70,3 +148,5 @@
   font-family: "Roboto", sans-serif;
   text-align: justify;
 }
+
+*/
