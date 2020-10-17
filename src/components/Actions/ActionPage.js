@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../Header'
 import SectionTitle from '../utils/SectionTitle.js'
 import SwitchLight from '../utils/SwitchLight.js'
-import Footer from '../Footer/'
+import Footer from '../Footer'
 import ActionCard from './ActionCard.js'
 import "./style.scss";
 
