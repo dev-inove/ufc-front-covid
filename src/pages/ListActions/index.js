@@ -1,16 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import api from "../../services/api-back";
+
+import "./style.scss";
 
 const ListActions = () => {
-  return (
-    <>
-      <div className="test">
-        <h1>Alvaro Bianor</h1>
-      </div>
+  return <></>;
+};
 
-      <h2>Sousa Medeiros</h2>
-    </>
-  )
-}
-
-
-export default ListActions
+export default ListActions;

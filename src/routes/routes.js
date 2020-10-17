@@ -14,7 +14,7 @@ function Routes() {
         <Route path="/" component={Home} exact />
         <Route path="/login" component={Login} />
         <Route path="/action" component={Action} />
-        <Route path="/list-action" component={ListAction} />
+        <Route path="/list-actions" component={ListAction} />
       </Switch>
     </BrowserRouter>
   );
