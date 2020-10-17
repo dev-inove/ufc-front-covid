@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import api from "../../services/api-back";
+// import React, { useEffect, useState } from "react";
+import React from "react";
+// import api from "../../services/api-back";
 import { Form, Button, Col, Jumbotron, Image } from "react-bootstrap";
 import Img1 from "../../assets/img/covid-mask.jpg";
 import Header from "../../components/Header/Navbar";
-// import Footer from "../../components/Footer";
+import Footer from "../../components/Footer";
 
 import "./style.scss";
 
@@ -540,6 +541,7 @@ const ListActions = () => {
             <Image src={Img1} className="jumbo-listAction-image" fluid />
           </Jumbotron>
         </div>
+        <Footer />
       </div>
     </>
   );

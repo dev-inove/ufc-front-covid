@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import api from "../../services/api-back";
+// import React, { useEffect, useState } from "react";
+// import api from "../../services/api-back";
+import React from "react";
 
 import Header from "../../components/Header/Navbar";
 import { Image } from "react-bootstrap";
@@ -9,27 +10,27 @@ import Footer from "../../components/Footer";
 import "./style.scss";
 
 export default function Action() {
-  useEffect(() => {
-    // async function load() {
-    //   const { data } = await api.post("/sessions", {
-    //     email: "bianor.alvaro12@gmail.com",
-    //     password: "Alvim",
-    //   });
-    //   console.log(data);
-    // }
-    // load();
-  }, []);
+  // useEffect(() => {
+  // async function load() {
+  //   const { data } = await api.post("/sessions", {
+  //     email: "bianor.alvaro12@gmail.com",
+  //     password: "Alvim",
+  //   });
+  //   console.log(data);
+  // }
+  // load();
+  // }, []);
 
-  const [email, setEmail] = useState("");
-  const [action, setAction] = useState([]);
+  // const [email, setEmail] = useState("");
+  // const [action, setAction] = useState([]);
 
-  async function submitt(e) {
-    e.preventDefault();
+  // async function submitt(e) {
+  //   e.preventDefault();
 
-    const { data } = await api.get(`/action?title=${email}`);
+  //   const { data } = await api.get(`/action?title=${email}`);
 
-    setAction(data.action);
-  }
+  //   setAction(data.action);
+  // }
 
   return (
     <>
