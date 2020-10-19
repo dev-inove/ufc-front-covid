@@ -6,12 +6,13 @@
 /* Elements Styling */
 .action-cardlist {
   height: 23em;
-  width: 63em;
+  width: 67em;
   border: 1px solid;
   border-color: var(--black-8);
   border-radius: 1rem;
   margin: 0rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   background-color: rgb(242, 236, 236);
 
   &__imagelist {
