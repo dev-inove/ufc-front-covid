@@ -3,6 +3,7 @@ import React from "react";
 // import Necessities from "../../components/Necessities/Necessities";
 // import Productions from "../../components/Productions";
 import "../../styles/main.scss";
+
 import Header from "../../components/Header";
 import Actions from "../../components/Actions/Actions";
 import Call from "../../components/CalltoAction/CallToAction";

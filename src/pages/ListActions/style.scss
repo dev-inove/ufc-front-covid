@@ -1,32 +1,111 @@
-.page {
-  margin-top: 80px;
+.Card-List{
+  overflow-Y: hidden;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-between; 
+  margin-left: 3rem;
+  
+ 
+}
+.ActionsList{
+  margin-top: 10%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  // align-items: center;
-  // align-content: center;
+
+
+ 
+}
+.search{
+  display: grid;
+  grid-row-gap: auto;
+  grid-template-columns: 30% auto;
+  width: 100%;
+      &__select{
+        color: var(--primary-purple);
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        border-radius: 4rem;
+        .op{
+          color: var(--primary-purple);
+        }
+        
+      }
+      &__form-control{
+        margin-left: 2rem;
+        width: 65rem;
+        color: var(--primary-purple);
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        border-radius: 4rem;
+      }
+      &__page-btn {
+        background-color: var(--primary-purple);
+        color: var(--white-1);
+  
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+  
+        padding: 1rem 5rem;
+        border: none;
+        border-radius: 4rem;
+  
+        cursor: pointer;
+        outline: none;
+  
+        transition: 0.2s ease-out;
+  
+        &__page-btn:hover {
+          transform: scale(1.1);
+        }
+      }
+      
+      &__page-btn:hover {
+        color: white;
+        background-color: var(--primary-purple);
+        transform: scale(1.1);
+      }
+      
+      
+
+}
+.section-title {
+  margin: 5rem 0;
+  margin-left: 4rem;
+  &__main {
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 0.2rem;
+      color: var(--black-2);
+  }
+
+  &__sub {
+      color: rgba(black, 0.6);
+      
+
+      font-family: 'Merriweather';
+      font-size: 2rem;
+      font-weight: 500;
+
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      width: 60%;
+  }
+
+  &__underline {
+      width: 40rem;
+      border: none;
+      border-bottom: 3px solid var(--primary-purple);
+  }
 }
 
-.page-title {
-  width: 70%;
-  margin-top: 5%;
-  margin-left: 5%;
-}
-.page-title h1 {
-  font-size: 50px;
-}
 
-.page-form {
-  margin-left: 5%;
-  width: auto;
-}
 
-.page-listActions {
-  width: 80%;
-  margin-left: 5%;
-  margin-top: 50px;
-}
+/* 
 
 // bootstrap custom
 .page-btn {
@@ -46,7 +125,7 @@
   margin-top: 2%;
 }
 
-#jumbo-listAction {
+#jumbo-listlistActions {
   background-color: #bb8cda;
   max-height: 250px;
   color: ghostwhite;
@@ -55,18 +134,18 @@
   justify-items: left;
 }
 
-#jumbo-listAction h1 {
+#jumbo-listlistActions h1 {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
 }
 
-#jumbo-listAction p {
+#jumbo-listlistActions p {
   font-size: 10px;
   max-width: 40%;
   font-family: "Poppins", sans-serif;
 }
 
-.jumbo-listAction-image {
+.jumbo-listlistActions-image {
   max-width: 30%;
 }
 

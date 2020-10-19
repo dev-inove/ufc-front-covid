@@ -10,9 +10,9 @@ const Navbar = () => (
 
       <ul className="navbar__list">
         <li className="active">
-          <a href="#home" className="navbar_link">
+        <Link to="/" className="navbar_link">
             Home
-          </a>
+          </Link>
         </li>
         <li>
           <Link to="/action" className="navbar_link">
@@ -35,7 +35,11 @@ const Navbar = () => (
       <div className="navbar__actions">
         <a href="opa">Cadastrar</a>
 
-        <button href="/login">Login</button>
+        <button href="">
+      
+        Login
+      
+          </button>
       </div>
     </nav>
   </>

@@ -1,548 +1,108 @@
 // import React, { useEffect, useState } from "react";
 import React from "react";
 // import api from "../../services/api-back";
-import { Form, Button, Col, Jumbotron, Image } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
+
 import Img1 from "../../assets/img/covid-mask.jpg";
 import Header from "../../components/Header/Navbar";
 import Footer from "../../components/Footer";
-
+import ListActionCard from '../../components/Actions/CardList/ListActionCard.js'
 import "./style.scss";
 
 const ListActions = () => {
   return (
     <>
       <Header />
-      <div className="page">
-        <div className="page-title">
-          <h1>Ações</h1>
-          <hr />
-        </div>
-        <div className="page-form">
+     <div className="ActionsList">
+    
+     <div className="actions pad-sm">
+        <div className="section-title" >
+                <h1 className="section-title__main">Ações</h1>
+                <hr className="section-title__underline" />
+                <div className="search">
+                <div className="search__selector">
+            <Form.Control as="select" className="search__select">
+              <option className="op"> Select Category</option>
+              <option className="op">Cat2</option>
+              <option className="op">Cat3</option>
+              <option className="op">Cat4</option>
+              <option className="op">Cat5</option>
+            </Form.Control>
+          </div>
+
+<div className="search__page-form">
           <Form>
             <Form.Row>
               <Col>
                 <Form.Control
                   column="lg"
-                  className="form-control form-control-lg"
+                  className="search__form-control form-control-lg"
                   type="text"
                   placeholder="Pesquisar Ações"
                 />
               </Col>
               <Col>
-                <Button size="lg" className="page-btn" type="submit">
+                <Button size="lg" className="search__page-btn" type="submit">
                   Pesquisar
                 </Button>
               </Col>
             </Form.Row>
           </Form>
-          <div className="selector">
-            <Form.Label>Select Category</Form.Label>
-            <Form.Control as="select">
-              <option>Cat1</option>
-              <option>Cat2</option>
-              <option>Cat3</option>
-              <option>Cat4</option>
-              <option>Cat5</option>
-            </Form.Control>
+
+         
+          </div></div>
+         
           </div>
         </div>
-        <div className="page-listActions">
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-          <Jumbotron id="jumbo-listAction">
-            <div className="jumbo-listAction-content">
-              <h1>
-                <strong>Combatemos o Coronga e vencemos!</strong>
-              </h1>
-              <p>
-                If you use this site regularly and would like to help keep the
-                site on the Internet, please consider donating a small sum to
-                help pay for the hosting and bandwidth bill. There is no minimum
-                donation, any sum is appreciated - click here to donate using
-                PayPal. Thank you for your support.
-              </p>
-
-              <Button className="page-btn page-btn2">Ver mais...</Button>
-            </div>
-            <Image src={Img1} className="jumbo-listAction-image" fluid />
-          </Jumbotron>
-        </div>
-        <Footer />
+        <div className="actions pad-sm">
+            <div className="Card-List">
+             
+            <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+            
+            <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+             <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+            
+            <ListActionCard image={Img1} title="Confecções de Máscaras" sub=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            excepturi, saepe vel quo molestias pariatur deserunt sed ipsum
+            quasi quas ducimus voluptates cum. Sequi odio impedit quae
+            nihil nam ea."/>
+          
+       
+       
+      
       </div>
+      </div></div>
+        <Footer />
+      
     </>
   );
 };
