@@ -10,18 +10,14 @@ const Navbar = () => (
 
       <ul className="navbar__list">
         <li className="active">
-        <Link to="/" className="navbar_link">
+          <Link to="/" className="navbar_link">
             Home
           </Link>
         </li>
-        <li>
-          <Link to="/action" className="navbar_link">
-            Ações
-          </Link>
-        </li>
+
         <li>
           <Link to="/list-actions" className="navbar_link">
-            Listar Ações
+            Ações
           </Link>
         </li>
         {/* <li><a href="#productions" className="navbar_link">Produções</a></li>
@@ -33,13 +29,7 @@ const Navbar = () => (
         </li>
       </ul>
       <div className="navbar__actions">
-        <a href="opa">Cadastrar</a>
-
-        <button href="">
-      
-        Login
-      
-          </button>
+        <button href="">Cadastrar</button>
       </div>
     </nav>
   </>
