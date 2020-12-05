@@ -6,6 +6,7 @@ import Home from "../App";
 import Login from "../pages/Login/Login";
 import Action from "../pages/Action/";
 import ListAction from "../pages/ListActions/index";
+import About from "../pages/Sobre/about";
 import Adm from "../pages/Admin/AdminPages";
 
 function Routes() {
@@ -16,6 +17,7 @@ function Routes() {
         <Route path="/login" component={Login} />
         <Route path="/action" component={Action} />
         <Route path="/list-actions" component={ListAction} />
+        <Route path="/about" component={About} />
         <Route path="/adm" component={Adm} />
       </Switch>
     </BrowserRouter>

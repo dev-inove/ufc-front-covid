@@ -20,6 +20,11 @@ const Navbar = () => (
             Ações
           </Link>
         </li>
+        <li>
+          <Link to="/about" className="navbar_link">
+            Sobre
+          </Link>
+        </li>
         {/* <li><a href="#productions" className="navbar_link">Produções</a></li>
             <li><a href="#necessity" className="navbar_link">Necessidades</a></li> */}
         <li>
