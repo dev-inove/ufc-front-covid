@@ -34,7 +34,9 @@ const Navbar = () => (
         </li>
       </ul>
       <div className="navbar__actions">
-        <button href="">Cadastrar</button>
+        <Link to="/login">
+          <button>Login</button>
+        </Link>
       </div>
     </nav>
   </>
