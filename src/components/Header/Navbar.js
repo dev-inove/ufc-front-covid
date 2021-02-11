@@ -34,6 +34,7 @@ const Navbar = () => (
         </li>
       </ul>
       <div className="navbar__actions">
+        {/* verificar fluxo de login  */}
         <Link to="/login">
           <button>Login</button>
         </Link>

@@ -1,16 +1,15 @@
 import React from "react";
 import "./style.scss";
 import SectionTitle from "../../components/utils/SectionTitle";
-import Logo from "../../assets/svg/logopurple.svg";
+import Header from "../../components/Header/Navbar";
+import Footer from "../../components/Footer";
+import Call from "../../components/CalltoAction/CallToAction";
+import { Link } from "react-router-dom";
+
 const Login = () => (
   <>
+    <Header />
     <div class="auth">
-      <div class="auth__cover">
-        <img class="logo" src={Logo} alt="logo-combate-ao-covid-19" />
-        <svg>
-          <use href="opa" />
-        </svg>
-      </div>
       <div class="auth__login">
         <SectionTitle title="Login">
           Faça login para gerenciar ações.
@@ -46,10 +45,14 @@ const Login = () => (
             <span class="forgot-password">Esqueci minha senha</span>
           </div>
 
-          <button>Entrar</button>
+          <Link to="/adm">
+            <button>Entrar</button>
+          </Link>
         </div>
       </div>
     </div>
+    <Call />
+    <Footer />
   </>
 );
 

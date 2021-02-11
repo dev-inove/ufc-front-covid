@@ -3,9 +3,9 @@
 import React from "react";
 
 import Header from "../../components/Header/Navbar";
+import Footer from "../../components/Footer";
 import { Image } from "react-bootstrap";
 import Img1 from "../../assets/img/covid-mask.jpg";
-import Footer from "../../components/Footer";
 
 import "./style.scss";
 

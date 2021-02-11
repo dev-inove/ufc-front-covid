@@ -1,31 +1,28 @@
-
-
 .section-title {
-    margin: 5rem 0;
-    margin-left: 1.5rem;
-    &__main {
-        font-weight: bold;
-        font-size: 2.8rem;
-        margin-bottom: 0.2rem;
-        color: var(--black-2);
-    }
+  //   margin: 5rem 0;
+  //   margin-left: 1.5rem;
+  &__main {
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-bottom: 0.2rem;
+    color: var(--black-2);
+  }
 
-    &__sub {
-        color: rgba(black, 0.6);
-        
+  &__sub {
+    color: rgba(black, 0.6);
 
-        font-family: 'Merriweather';
-        font-size: 2rem;
-        font-weight: 500;
+    font-family: "Merriweather";
+    font-size: 2rem;
+    font-weight: 500;
 
-        margin-bottom: 2rem;
-        line-height: 1.2;
-        width: 60%;
-    }
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    width: 60%;
+  }
 
-    &__underline {
-        width: 40rem;
-        border: none;
-        border-bottom: 3px solid var(--primary-purple);
-    }
+  &__underline {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid var(--primary-purple);
+  }
 }
