@@ -1,115 +1,115 @@
-
 .admin-pages {
-    display: grid;
-    grid-template-columns: 20% 1fr;
+  display: grid;
+  grid-template-columns: 20% 1fr;
 
-    background-color: #fcfcfc;
-    height: 100vh;
+  background-color: #fcfcfc;
+  height: 100vh;
 }
 .list__area {
-    width: 100%;
+  width: 100%;
 }
 
 .disabled:hover {
-    cursor: default;
+  cursor: default;
 }
 
 .sidebar {
-    img {
-        align-self: flex-start;
-    }
+  img {
+    align-self: flex-start;
+  }
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 3rem 0;
+  padding-left: 4rem;
+
+  &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    list-style: none;
+    margin: 1rem 0;
+    color: rgba(black, 0.6);
 
-    background-color: #fff;
-    height: 100%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 3rem 0;
-    padding-left: 4rem;
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin: 1rem 0;
-        color: rgba(black, 0.6);
-
-        h2 {
-            margin: 1rem 0;
-            font-size: 1.2rem;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        &--li {
-            position: relative;
-            cursor: pointer;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 100%;
-                width: 2px;
-                background-color: #66288e;
-                transform: scaleY(0);
-                transition: transform 0.4s, background-color 0.1s;
-            }
-
-            &:not(.selected):not(.disabled):hover::before {
-                transform: scaleY(1);
-            }
-
-            &:hover:not(.selected):not(.disabled) {
-                color: black;
-
-                & .icon {
-                    fill: black;
-                }
-            }
-
-            &.selected {
-                color: black;
-                background-color: #f7f7f7;
-                border-right: 2px solid #66288e;
-
-                & .icon {
-                    fill: black;
-                }
-            }
-
-            // background-color: aliceblue;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: rgba(black, 0.6);
-            padding: 1rem;
-
-            .icon {
-                height: 1.8rem;
-                width: 1.8rem;
-                margin: 0.5rem;
-                margin-right: 1rem;
-                fill: rgba(black, 0.6);
-            }
-        }
+    h2 {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
     }
+
+    &--li {
+      position: relative;
+      cursor: pointer;
+      color: tomato;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #66288e;
+        transform: scaleY(0);
+        transition: transform 0.4s, background-color 0.1s;
+      }
+
+      &:not(.selected):not(.disabled):hover::before {
+        transform: scaleY(1);
+      }
+
+      &:hover:not(.selected):not(.disabled) {
+        color: black;
+
+        & .icon {
+          fill: black;
+        }
+      }
+
+      &.selected {
+        color: black;
+        background-color: #f7f7f7;
+        border-right: 2px solid #66288e;
+
+        & .icon {
+          fill: black;
+        }
+      }
+
+      // background-color: aliceblue;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: rgba(black, 0.6);
+      padding: 1rem;
+
+      .icon {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin: 0.5rem;
+        margin-right: 1rem;
+        fill: rgba(black, 0.6);
+      }
+    }
+  }
 }
 
 .logout {
-    a,
-    a:visited {
-        font-size: 1.4rem;
-        font-weight: 500;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        color: rgba(black, 0.6);
-    }
+  a,
+  a:visited {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: rgba(black, 0.6);
+  }
 }
