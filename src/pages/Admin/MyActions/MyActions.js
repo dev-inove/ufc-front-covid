@@ -2,9 +2,7 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./styles.js";
 
-import AdminPageTitle from "../General/AdminPageTitle";
-import ActionButton from "../General/ActionButton";
-import Table from "../General/Table";
+import Formulario from "../../../components/Forms/Forms.js";
 import "./style.scss";
 const MyActions = () => {
   const [title, setTitle] = useState();
@@ -15,28 +13,7 @@ const MyActions = () => {
 
   return (
     <>
-      <form>
-        <div class="my-actions__content">
-          <div class="my-actions__content--step">
-            <S.Container />
-            <label for="title">Titulo da ação</label>
-            <input
-              type="text"
-              id="title"
-              placeholder="Ex: Confecção de máscaras"
-              onKeyPress={(e) => setTitle(e.target.value)}
-            />
-
-            <label for="subtitle">Subtítulo</label>
-            <input
-              type="text"
-              id="subtitle"
-              placeholder="Ex: Postos de saúde precisam de máscaras"
-            />
-          </div>
-          <h1>Álvaro</h1>
-        </div>
-      </form>
+      <Formulario />
     </>
   );
 };
