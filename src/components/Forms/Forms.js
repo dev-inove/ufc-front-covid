@@ -236,7 +236,7 @@ const Formulario = () => {
                         <td>{index + 1}</td>
                         <td>{e.title}</td>
                         <td>{e.subtitle}</td>
-                        <td>{e.category}</td>
+                        <td>{e.categoryName || "Teste"}</td>
                         <td>{e.fullName}</td>
                         <td>{e.institution}</td>
                         <td>{e.email}</td>
