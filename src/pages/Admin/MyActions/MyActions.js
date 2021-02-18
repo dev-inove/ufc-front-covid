@@ -5,12 +5,6 @@ import * as S from "./styles.js";
 import Formulario from "../../../components/Forms/Forms.js";
 import "./style.scss";
 const MyActions = () => {
-  const [title, setTitle] = useState();
-
-  useEffect(() => {
-    console.log(title);
-  }, [title]);
-
   return (
     <>
       <Formulario />
