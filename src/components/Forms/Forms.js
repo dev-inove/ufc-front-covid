@@ -7,7 +7,7 @@ import { Form, Button, Col, Table } from "react-bootstrap";
 import "../../pages/ListActions/style.scss";
 
 const Formulario = () => {
-  const [imgUrl, setImgUrl] = useState("");
+  const [imgUrl, setImgUrl] = useState(null);
 
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
@@ -46,6 +46,7 @@ const Formulario = () => {
 
   function clean() {
     alert("Cadastrado com Sucesso");
+    setImgUrl(null);
     setTitle("");
     setSubtitle("");
     setDescription("");
@@ -59,15 +60,23 @@ const Formulario = () => {
   async function submitAction(event) {
     event.preventDefault();
 
-    const res = await api.post("/actions", {
-      fullName,
-      institution,
-      email,
-      category,
-      title,
-      subtitle,
-      description,
-    });
+    const data = new FormData();
+
+    data.append("file", imgUrl);
+    data.append("fullName", fullName);
+    data.append("email", email);
+    data.append("institution", institution);
+    data.append("category", category);
+    // data.append("initialDate", "12/07/1998");
+    // data.append("finalDate", "12/07/1998");
+    data.append("title", title);
+    data.append("subtitle", subtitle);
+    data.append("description", description);
+
+    // data.append('result', result)
+
+    const res = await api.post("/actions", data);
+    console.log(res);
     res.status === 200 ? clean() : alert("Houve um problema, tente novamente");
   }
 
@@ -100,6 +109,7 @@ const Formulario = () => {
                         <Form.File
                           id="exampleFormControlFile1"
                           label="Upload de arquivo"
+                          onChange={(e) => setImgUrl(e.target.files[0])}
                         />
                       </Form.Group>
                     </Col>
