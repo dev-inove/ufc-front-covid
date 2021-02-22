@@ -18,12 +18,6 @@ const ListActions = () => {
   const [actions, setActions] = useState([]);
   const [allActions, setAllActions] = useState([]);
 
-  const getCategories = async () => {
-    const { data } = await api.get("/categories");
-    setSelectCategory(data);
-    // return data;
-  };
-
   const getActions = async () => {
     const { data } = await api.get("/actions");
     // console.log(data);
@@ -54,12 +48,17 @@ const ListActions = () => {
     setActions(aux);
   };
 
+  const getCategories = async () => {
+    const { data } = await api.get("/categories");
+    setSelectCategory(data);
+    // return data;
+  };
   useEffect(() => {
     getCategories();
     getActions();
   }, []);
 
-  console.log("Alvaro ia dfdf".replace(/ /g, "_"));
+  // console.log("Alvaro ia dfdf".replace(/ /g, "_"));
 
   return (
     <>

@@ -13,7 +13,10 @@ class ActionCard extends Component {
             />
             <h1 className="action-card__text--title"> {this.props.title}</h1>
             <h2 className="action-card__text--sub"> {this.props.sub}</h2>
-            <a className="action-card__text--link" href="/action">
+            <a
+              className="action-card__text--link"
+              href={`/action/${this.props.titleReplaced}`}
+            >
               Saiba mais →{" "}
             </a>
           </div>
