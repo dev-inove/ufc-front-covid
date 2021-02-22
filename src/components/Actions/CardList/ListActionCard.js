@@ -15,11 +15,13 @@ class ListActionCard extends Component {
               <h2 className="action-cardlist__textlist--sublist">
                 {this.props.sub}
               </h2>
-              <a className="action-cardlist__textlist--linklist" href="/action">
-                <Link to="/action">
-                  <button> Saiba mais</button>
-                </Link>
-              </a>
+
+              <Link
+                className="action-cardlist__textlist--linklist"
+                to={`/action/${this.props.titleReplaced}`}
+              >
+                <button> Saiba mais</button>
+              </Link>
             </div>
             <div className="item">
               <img
