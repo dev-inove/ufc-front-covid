@@ -3,19 +3,23 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useAuth } from "../hooks";
 
-const Router = ({ isPrivate = false, component: Component, ...rest }) => {
+const Router = ({
+  isPrivate = false,
+  oneTime = false,
+  component: Component,
+  ...rest
+}) => {
   const {
     data: { token },
   } = useAuth();
-  console.log("token", token);
 
   if (!token && isPrivate) {
     return <Redirect to="/login" />;
   }
 
-  // if (token && !isPrivate) {
-  //   return <Redirect to="/" />;
-  // }
+  if (token && oneTime) {
+    return <Redirect to="/" />;
+  }
 
   return <Route {...rest} render={(rest) => <Component {...rest} />} />;
   // return (

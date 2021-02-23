@@ -1,13 +1,16 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks";
 
-const Sidebar = () => (
-  <>
-    <div class="sidebar">
-      {/* <img src="opa" alt="logo-combate-covid" /> */}
-      <div class="list__area">
-        {/* <ul class="sidebar__list">
+const Sidebar = () => {
+  const { signOut } = useAuth();
+  return (
+    <>
+      <div class="sidebar">
+        {/* <img src="opa" alt="logo-combate-covid" /> */}
+        <div class="list__area">
+          {/* <ul class="sidebar__list">
           <router-link
             tag="li"
             to="/dashboard"
@@ -27,10 +30,10 @@ const Sidebar = () => (
           </li>
         </ul> */}
 
-        <ul class="sidebar__list">
-          <h2>Área do Usuário</h2>
+          <ul class="sidebar__list">
+            <h2>Área do Usuário</h2>
 
-          {/* <router-link
+            {/* <router-link
             tag="li"
             to="/my"
             exact-active-class="selected"
@@ -41,21 +44,30 @@ const Sidebar = () => (
             </svg>
             Minhas Ações
           </router-link> */}
-          <li class="sidebar__list--li">
-            <Link to="/cadastrar" style={{ color: "#000000" }}>
-              <svg class="icon">
-                <use />
-              </svg>
-              Minhas Ações
-            </Link>
-          </li>
-        </ul>
-        <span class="logout">
-          <a href="opa">Sair</a>
-        </span>
+            <li class="sidebar__list--li">
+              <Link to="/cadastrar" style={{ color: "#000000" }}>
+                <svg class="icon">
+                  <use />
+                </svg>
+                Minhas Ações
+              </Link>
+            </li>
+          </ul>
+          <span class="logout">
+            <a
+              href="/"
+              onClick={() => {
+                console.log("Foi");
+                signOut();
+              }}
+            >
+              Sair
+            </a>
+          </span>
+        </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default Sidebar;

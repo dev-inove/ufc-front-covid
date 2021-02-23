@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useState, useContext } from "react";
+import { Redirect } from "react-router-dom";
 import api from "../services/api-back";
 
 const AuthContext = createContext({});
@@ -28,6 +29,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("@user", JSON.stringify(user));
 
       setData({ token, user });
+      return <Redirect to="/" />;
     }
   }, []);
 
