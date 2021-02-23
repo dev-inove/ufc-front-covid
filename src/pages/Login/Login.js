@@ -1,34 +1,35 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.scss";
 import SectionTitle from "../../components/utils/SectionTitle";
 import Header from "../../components/Header/Navbar";
 import Footer from "../../components/Footer";
 import Call from "../../components/CalltoAction/CallToAction";
 import { Link, useHistory } from "react-router-dom";
-import api from "../../services/api-back";
+import { useAuth } from "../../hooks";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const history = useHistory();
+  const { signIn } = useAuth();
+  // const history = useHistory();
 
-  async function submitAction(event) {
-    event.preventDefault();
+  // async function submitAction(event) {
+  //   event.preventDefault();
 
-    console.log(email, password);
+  //   console.log(email, password);
 
-    const { data } = await api.post("/sessions", {
-      email,
-      password,
-    });
-    console.log(data);
+  //   const { data } = await api.post("/sessions", {
+  //     email,
+  //     password,
+  //   });
+  //   console.log(data);
 
-    localStorage.setItem("token", data.token);
+  //   localStorage.setItem("token", data.token);
 
-    data.token ? history.push("/") : alert("Erro no login");
-  }
+  //   data.token ? history.push("/") : alert("Erro no login");
+  // }
   return (
     <>
       <Header />
@@ -72,7 +73,7 @@ const Login = () => {
               <span class="forgot-password">Esqueci minha senha</span>
             </div>
 
-            <button onClick={submitAction}> Entrar</button>
+            <button onClick={() => signIn({ email, password })}> Entrar</button>
           </div>
         </div>
       </div>

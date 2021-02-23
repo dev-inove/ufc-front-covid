@@ -7,8 +7,13 @@ import Header from "../../components/Header/Navbar";
 import Footer from "../../components/Footer";
 import ListActionCard from "../../components/Actions/CardListaAbout/ListActionCard";
 import "./style.scss";
+import { useAuth } from "../../hooks";
 
 const ListActions = () => {
+  const obj = useAuth();
+
+  console.log(obj);
+
   return (
     <>
       <Header />
@@ -58,10 +63,10 @@ const ListActions = () => {
             quasi quas ducimus voluptates cum. Sequi odio impedit quae
             nihil nam ea."
             />
-        <div className="section-title">
-            <h1 className="section-title__main">Desenvolvedores</h1>
-            <hr className="section-title__underline" />
-          </div>
+            <div className="section-title">
+              <h1 className="section-title__main">Desenvolvedores</h1>
+              <hr className="section-title__underline" />
+            </div>
             <ListActionCard
               image={Img1}
               title="Confecções de Máscaras"
