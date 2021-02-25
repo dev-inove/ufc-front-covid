@@ -9,6 +9,7 @@ const AdminPages = () => (
     <div class="admin-pages">
       <Router>
         <Sidebar />
+        {/* <Header /> */}
         <Switch>
           <Route path="/cadastrar" exact component={MyActions} />
         </Switch>

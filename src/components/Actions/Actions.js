@@ -5,7 +5,7 @@ import api from "../../services/api-back";
 import Carousel from "react-elastic-carousel";
 import SectionTitle from "../utils/SectionTitle.js";
 import ActionCard from "./ActionCard.js";
-import Mask from "../../assets/img/covid-mask.jpg";
+// import Mask from "../../assets/img/covid-mask.jpg";
 import "./style.scss";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },

@@ -149,7 +149,7 @@ const Formulario = () => {
               </Form>
             </div>
 
-            <h1 className="section-title__main">Cadastro</h1>
+            <h1 className="section-title__main">Cadastrar ação</h1>
             <hr className="section-title__underline" />
             <div className="search">
               <div className="search__page-form">

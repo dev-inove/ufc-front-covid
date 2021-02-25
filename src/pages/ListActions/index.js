@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import api from "../../services/api-back";
 
-import Img1 from "../../assets/img/covid-mask.jpg";
+// import Img1 from "../../assets/img/covid-mask.jpg";
 import Header from "../../components/Header/Navbar";
 import Footer from "../../components/Footer";
 import ListActionCard from "../../components/Actions/CardList/ListActionCard.js";
@@ -12,7 +12,7 @@ import "./style.scss";
 
 const ListActions = () => {
   const [selectCategory, setSelectCategory] = useState({});
-  const [category, setCategory] = useState("");
+  // const [category, setCategory] = useState("");
   const [title, setTitle] = useState("");
 
   const [actions, setActions] = useState([]);
