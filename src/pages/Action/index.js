@@ -47,7 +47,7 @@ export default function Action() {
               "Title super foda e que vai mudar o mundo muito doido mano"}
           </h1>
           <div className="page-header-infos">
-            <p>Data: 12/17/1998</p>
+            <p>Data: {action.initialDate || "12/07/1998"}</p>
             <p>By: {action.fullName || "Alvim Maroto"}</p>
           </div>
           <div className="page-header-img">

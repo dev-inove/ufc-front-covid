@@ -58,31 +58,48 @@ const Formulario = () => {
     setInstitution("");
     setEmail("");
     setCategory("");
+    setInitialDate("");
+    setFinalDate("");
     setRefreshPage(!refreshPage);
   }
 
   async function submitAction(event) {
     event.preventDefault();
 
-    const data = new FormData();
+    try {
+      const data = new FormData();
 
-    data.append("file", imgUrl);
-    data.append("fullName", fullName);
-    data.append("email", email);
-    data.append("institution", institution);
-    data.append("category", category);
-    // data.append("initialDate", "12/07/1998");
-    // data.append("finalDate", "12/07/1998");
-    data.append("title", title);
-    data.append("subtitle", subtitle);
-    data.append("description", description);
-    data.append("result", result);
+      const formatedDate = (date) => {
+        const data = date.split("-");
+        return `${data[2]}/${data[1]}/${data[0]}`;
+      };
 
-    // data.append('result', result)
+      console.log(formatedDate(initialDate));
+      console.log(formatedDate(finalDate));
 
-    const res = await api.post("/actions", data);
-    console.log(res);
-    res.status === 200 ? clean() : alert("Houve um problema, tente novamente");
+      data.append("file", imgUrl);
+      data.append("fullName", fullName);
+      data.append("email", email);
+      data.append("institution", institution);
+      data.append("category", category);
+      data.append("title", title);
+      data.append("subtitle", subtitle);
+      data.append("initialDate", formatedDate(initialDate));
+      data.append("finalDate", formatedDate(finalDate));
+      data.append("description", description);
+      data.append("result", result);
+
+      // data.append("result", result);
+
+      const res = await api.post("/actions", data);
+      console.log(res);
+      res.status === 200
+        ? clean()
+        : alert("Houve um problema, tente novamente :(");
+    } catch (error) {
+      alert("Houve um problema, tente novamente");
+      console.log(error);
+    }
   }
 
   const refresh = () => {
@@ -226,6 +243,28 @@ const Formulario = () => {
                         placeholder="Subtitulo"
                         value={subtitle}
                         onChange={(e) => setSubtitle(e.target.value)}
+                      />
+                    </Col>
+                    <Col>
+                      <label>Data Inicial</label>
+                      <Form.Control
+                        column="lg"
+                        className="search__form-control form-control-lg"
+                        type="date"
+                        placeholder="Data inicial"
+                        value={initialDate}
+                        onChange={(e) => setInitialDate(e.target.value)}
+                      />
+                    </Col>
+                    <Col>
+                      <label>Data Final</label>
+                      <Form.Control
+                        column="lg"
+                        className="search__form-control form-control-lg"
+                        type="date"
+                        placeholder="Data final"
+                        value={finalDate}
+                        onChange={(e) => setFinalDate(e.target.value)}
                       />
                     </Col>
                     <Col>
