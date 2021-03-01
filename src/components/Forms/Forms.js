@@ -216,7 +216,9 @@ const Formulario = () => {
                       />
                     </Col>
                     <Col>
-                      <label>Data Inicial</label>
+                      <label className="search__form-control form-control-lg">
+                        Data Inicial
+                      </label>
                       <Form.Control
                         column="lg"
                         className="search__form-control form-control-lg"
@@ -227,7 +229,9 @@ const Formulario = () => {
                       />
                     </Col>
                     <Col>
-                      <label>Data Final</label>
+                      <label className="search__form-control form-control-lg">
+                        Data Final
+                      </label>
                       <Form.Control
                         column="lg"
                         className="search__form-control form-control-lg"
@@ -239,7 +243,9 @@ const Formulario = () => {
                     </Col>
                     <Col>
                       <div class="form-group">
-                        <label>Categoria</label>
+                        <label className="search__form-control form-control-lg">
+                          Categoria
+                        </label>
                         <select
                           class="form-control"
                           onChange={(e) => setCategory(e.target.value)}
@@ -296,7 +302,7 @@ const Formulario = () => {
                 </Form>
               </div>
             </div>
-            {actions.actions !== undefined && (
+            {/* {actions.actions !== undefined && (
               <div>
                 <h1 className="section-title__main">Lista de cadastros</h1>
                 <hr className="section-title__underline" />
@@ -340,7 +346,7 @@ const Formulario = () => {
                   </tbody>
                 </Table>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>
