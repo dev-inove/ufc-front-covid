@@ -136,36 +136,6 @@ const Formulario = () => {
       <div className="ActionsList">
         <div className="actions pad-sm">
           <div className="section-title">
-            <div>
-              <h1 className="section-title__main">Cadastrar categoria</h1>
-              <hr className="section-title__underline" />
-              <Form onSubmit={submitCategory}>
-                <Form.Row>
-                  <Col>
-                    <Form.Group className="search__form-control form-control-lg">
-                      <Form.Control
-                        column="lg"
-                        className="search__form-control form-control-lg"
-                        type="text"
-                        placeholder="Nova Categoria"
-                        value={newCategory}
-                        onChange={(e) => setNewCategory(e.target.value)}
-                      />
-                    </Form.Group>
-                  </Col>
-                  <Col>
-                    <Button
-                      size="lg"
-                      className="search__page-btn"
-                      type="submit"
-                    >
-                      Cadastar
-                    </Button>
-                  </Col>
-                </Form.Row>
-              </Form>
-            </div>
-
             <h1 className="section-title__main">Cadastrar ação</h1>
             <hr className="section-title__underline" />
             <div className="search">

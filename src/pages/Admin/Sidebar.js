@@ -29,7 +29,9 @@ const Sidebar = () => {
             Notificações
           </li>
         </ul> */}
-
+          <span class="logout">
+            <a href="/">Home</a>
+          </span>
           <ul class="sidebar__list">
             <h2>Área do Usuário</h2>
 
@@ -45,11 +47,27 @@ const Sidebar = () => {
             Minhas Ações
           </router-link> */}
             <li class="sidebar__list--li">
-              <Link to="/cadastrar" style={{ color: "#000000" }}>
+              <Link to="/cadastrar_action" style={{ color: "#000000" }}>
+                <svg class="icon">
+                  <use />
+                </svg>
+                Cadastrar Ações
+              </Link>
+            </li>
+            <li class="sidebar__list--li">
+              <Link to="/list_all_actions" style={{ color: "#000000" }}>
                 <svg class="icon">
                   <use />
                 </svg>
                 Minhas Ações
+              </Link>
+            </li>
+            <li class="sidebar__list--li">
+              <Link to="/cadastrar_category" style={{ color: "#000000" }}>
+                <svg class="icon">
+                  <use />
+                </svg>
+                Cadastrar Categorias
               </Link>
             </li>
           </ul>

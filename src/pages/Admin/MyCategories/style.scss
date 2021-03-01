@@ -1,0 +1,56 @@
+.centralize {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.my-actions {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--no-data-icon {
+            height: 262px;
+            width: 379px;
+        }
+    }
+
+    /* Content Form */
+    &__content {
+        &--step {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+            color: black;
+        }
+
+        input[type*='text'] {
+            background-color: #eeeeee;
+            border: none;
+            font-size: 1.4rem;
+            font-family: 'Roboto';
+            color: rgba(black, 0.8);
+            padding: 1rem 1.5rem;
+            border-radius: 0.7rem;
+        }
+    }
+
+    &__bottom-container {
+        display: flex;
+        margin: 1rem 0;
+    }
+}

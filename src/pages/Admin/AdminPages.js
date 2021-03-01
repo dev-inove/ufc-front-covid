@@ -4,6 +4,9 @@ import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import MyActions from "./MyActions/MyActions";
+import MyActionsShow from "./MyActionsShow/MyActionsShow";
+import MyCategory from "./MyCategories/index";
+
 const AdminPages = () => (
   <>
     <div class="admin-pages">
@@ -11,7 +14,9 @@ const AdminPages = () => (
         <Sidebar />
         {/* <Header /> */}
         <Switch>
-          <Route path="/cadastrar" exact component={MyActions} />
+          <Route path="/cadastrar_action" exact component={MyActions} />
+          <Route path="/list_all_actions" exact component={MyActionsShow} />
+          <Route path="/cadastrar_category" exact component={MyCategory} />
         </Switch>
       </Router>
     </div>
