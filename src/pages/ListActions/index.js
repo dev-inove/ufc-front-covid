@@ -48,6 +48,15 @@ const ListActions = () => {
     setActions(aux);
   };
 
+  const handleCampus = (institution) => {
+    const aux = allActions.filter((action) => {
+      return action.institution === institution;
+    });
+
+    // console.log("auxxx", aux);
+    setActions(aux);
+  };
+
   const getCategories = async () => {
     const { data } = await api.get("/categories");
     setSelectCategory(data);
@@ -70,7 +79,13 @@ const ListActions = () => {
             <hr className="section-title__underline" />
             <div className="search">
               <div className="search__selector">
-                <Form.Control as="select" className="search__select">
+                <Form.Control
+                  as="select"
+                  className="search__select"
+                  onChange={(e) => {
+                    handleCampus(e.target.value);
+                  }}
+                >
                   <option className="op"> Select Campus</option>
                   <option className="op">Campus Pici</option>
                   <option className="op">Campus Quixadá</option>
