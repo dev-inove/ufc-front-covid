@@ -51,7 +51,11 @@ export default function Action() {
             <p>By: {action.fullName || "Alvim Maroto"}</p>
           </div>
           <div className="page-header-img">
-            <Image src={action.url || Img1} thumbnail />
+            <Image
+              src={action.url || Img1}
+              style={{ width: "810px", height: "460px" }}
+              thumbnail
+            />
           </div>
         </div>
         <div className="text-description">
