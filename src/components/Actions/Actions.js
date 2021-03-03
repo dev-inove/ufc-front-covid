@@ -31,7 +31,7 @@ const Actions = () => {
     // console.log("data", data.actions);
     // console.log("aux", aux);
 
-    setActions(aux);
+    setActions(aux.reverse());
 
     // return data;
   };

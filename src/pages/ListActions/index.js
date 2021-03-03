@@ -86,7 +86,7 @@ const ListActions = () => {
                     handleCampus(e.target.value);
                   }}
                 >
-                  <option className="op"> Select Campus</option>
+                  <option className="op"> Selecione Campus</option>
                   <option className="op">Campus Pici</option>
                   <option className="op">Campus Quixadá</option>
                   <option className="op">Campus Sobral</option>
@@ -101,7 +101,7 @@ const ListActions = () => {
                     handleCategory(e.target.value);
                   }}
                 >
-                  <option className="op"> Select Category</option>
+                  <option className="op"> Selecione Categoria</option>
                   {selectCategory.categories !== undefined ? (
                     selectCategory.categories.map((e) => {
                       return <option key={e._id}>{e.name}</option>;
