@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Box from "./Box";
 import "./styles/banner.scss";
-import api from "../../services/api";
+import api from "../../services/api-back";
 
 const Banner = () => {
   const [data, setData] = useState({});
 
   const getData = async () => {
     try {
-      const {
-        data: { data },
-      } = await api.get("");
-      setData(data.filter((e) => e.uf === "CE")[0]);
+      const { data } = await api.get("/infos");
+      setData(data);
     } catch (e) {
-      setData({
-        cases: 415664,
-        deaths: 11087,
-        refuses: 89,
-        state: "Ceará",
-        suspects: 493,
-        uf: "CE",
-      });
+      alert("Inconsistência dos dados");
     }
   };
   useEffect(() => {
@@ -44,9 +35,9 @@ const Banner = () => {
         <div id="actions"></div>
 
         <div className="header__info">
-          <Box title="Confirmados" num={data.cases} />
-          <Box title="Recuperados" num={data.refuses} />
-          <Box title="Mortes" num={data.deaths} />
+          <Box title="Categorias" num={data.allCategories} />
+          <Box title="Ações" num={data.allActions} />
+          <Box title="Ações Concluídas" num={data.actionsDone} />
         </div>
       </header>
     </>

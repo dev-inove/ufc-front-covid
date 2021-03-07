@@ -6,7 +6,7 @@ class Box extends Component {
     return (
       <div className="box">
         <h2 className="box__title">{this.props.title}</h2>
-        <h2 className="box__state">CEARÁ</h2>
+
         <h2 className="box__num">{this.props.num}</h2>
       </div>
     );
