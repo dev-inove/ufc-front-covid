@@ -19,7 +19,7 @@ const Navbar = () => {
         <ul className="navbar__list">
           <li className="active">
             <Link to="/" className="navbar_link">
-              Home
+              Inicio
             </Link>
           </li>
 

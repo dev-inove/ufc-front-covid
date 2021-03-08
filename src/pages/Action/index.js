@@ -48,7 +48,7 @@ export default function Action() {
           </h1>
           <div className="page-header-infos">
             <p>Data: {action.initialDate || "12/07/1998"}</p>
-            <p>By: {action.fullName || "Alvim Maroto"}</p>
+            <p>Responsável: {action.fullName || "Alvim Maroto"}</p>
           </div>
           <div className="page-header-img">
             <Image

@@ -32,8 +32,6 @@ const Banner = () => {
           </h2>
         </div>
 
-        <div id="actions"></div>
-
         <div className="header__info">
           <Box title="Categorias" num={data.allCategories} />
           <Box title="Ações" num={data.allActions} />

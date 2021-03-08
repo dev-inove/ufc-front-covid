@@ -8,6 +8,7 @@ import Header from "../../components/Header";
 import Actions from "../../components/Actions/Actions";
 import Call from "../../components/CalltoAction/CallToAction";
 import Footer from "../../components/Footer";
+import TableInfos from "../../components/Header/TableInfos";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <div className="App">
         <Header />
         <Actions />
+        <TableInfos />
         <Call />
         {/* <Productions /> */}
         {/* <Necessities /> */}
